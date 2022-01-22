@@ -33,7 +33,7 @@ const App = () => {
 
     return (
         <div className="max-w-3xl mx-auto mt-16 text-center max-w-sm rounded shadow-lg p-10 bg-gray-300">
-            <h1 className={"mb-16"}>Bienvenu sur Ebichu quiz</h1>
+            <h1 className={"mb-16"}>Bienvenue sur Ebichu quiz</h1>
 
             <label>Nom : </label>
             <input name={'name'} type={'text'} value={name} onChange={handleNameChange}
