@@ -8,7 +8,7 @@
   %h1
     All answers by user
   - Answer.all.find_each do |answer_data|
-    .answer
+    .answer-summary
       .user-data
         = "#{answer_data.username} : #{answer_data.user_answers[-1]}"
       .answers

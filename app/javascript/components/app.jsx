@@ -35,8 +35,10 @@ const App = () => {
             <h1>Bienvenue sur Ebichu quiz</h1>
 
             <label>Nom : </label>
-            <input name={'name'} type={'text'} value={name} onChange={handleNameChange} />
-            <button onClick={startquiz}>Suivant</button>
+            <form onSubmit={startquiz}>
+                <input name={'name'} type={'text'} value={name} onChange={handleNameChange} />
+                <input type="submit" value="Commencer le questionnaire" />
+            </form>
         </div>
     )
 }
