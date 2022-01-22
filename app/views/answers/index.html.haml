@@ -1,12 +1,17 @@
-%h1
-  All answers by user
-- Answer.all.find_each do |answer_data|
-  .answer
-    .user
-      = answer_data.username
-    .final-answer
-      = answer_data.answers[-1]
-    .answers
-      %ul
-        - answer_data.answers[0..-2].each do |answer|
-          %li= answer
+.max-w-3xl.mx-auto.mt-16.mb-16.max-w-sm.rounded.shadow-lg.p-10.bg-gray-200
+  %h1.mb-8.font-bold.text-lg
+    Résumé des réponses finales :
+  %ul
+    - Answer.all.map{|a| a.answers.last}.tally.each do |answer, count|
+      %li= "#{answer} : #{count}"
+
+  %h1.mt-4.mb-8.font-bold.text-lg
+    All answers by user
+  - Answer.all.find_each do |answer_data|
+    .answer.p-2.bg-gray-300.mb-2.rounded
+      .user-data
+        = "#{answer_data.username} : #{answer_data.answers[-1]}"
+      .answers
+        %ul
+          - answer_data.answers[0..-2].each do |answer|
+            %li= answer
