@@ -1,13 +1,12 @@
 import React from 'react';
-import quizz from './quizz';
 
-const Question = ({question, setQuestion}) => {
+const Question = ({question, doAnswer}) => {
     return <div>
         <h2>{question.label}</h2>
         <div>
             {
                 question.answers.map((answer) => {
-                    return <button index={answer.button} onClick={() => setQuestion(quizz[answer.target])}>
+                    return <button key={answer.button} onClick={() => doAnswer(question.label, answer)}>
                         {answer.button}
                     </button>
                 })
