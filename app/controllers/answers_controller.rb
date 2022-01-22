@@ -6,7 +6,7 @@ class AnswersController < ApplicationController
   end
 
   def create
-    Answer.create!(username: params[:name], answers: params[:answers])
+    Answer.create!(username: params[:name], user_answers: params[:answers])
     render json: {}
   end
 end

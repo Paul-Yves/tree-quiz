@@ -1,3 +1,3 @@
 class Answer < ApplicationRecord
-  serialize :answers, JSON
+  serialize :user_answers, JSON
 end
