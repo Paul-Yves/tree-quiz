@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import quizz from './quizz';
+import quiz from './quiz';
 import Question from './question';
 import EndQuestion from './endQuestion';
 import {sendAnswers} from './answersService';
@@ -8,14 +8,14 @@ const App = () => {
     const [name, setName] = useState('');
     const [answers, setAnswers] = useState([]);
     const [question, setQuestion] = useState(null);
-    const startQuizz = () => {
+    const startquiz = () => {
         if (name !== '') {
-            setQuestion(quizz['first']);
+            setQuestion(quiz['first']);
         }
     }
     const doAnswer = (questionLabel, answer) => {
         const updatedAnswers = [...answers, [questionLabel, answer.button]];
-        const nextQuestion = quizz[answer.target];
+        const nextQuestion = quiz[answer.target];
         if (nextQuestion.answers === undefined) {
             updatedAnswers.push(nextQuestion.label);
             sendAnswers(name, updatedAnswers);
@@ -33,10 +33,10 @@ const App = () => {
 
     return (
         <div>
-            <h1>Bienvenu sur Ebichu Quizz</h1>
+            <h1>Bienvenu sur Ebichu quiz</h1>
 
             <input name={'name'} type={'text'} value={name} onChange={handleNameChange} />
-            <button onClick={startQuizz}>Suivant</button>
+            <button onClick={startquiz}>Suivant</button>
         </div>
     )
 }

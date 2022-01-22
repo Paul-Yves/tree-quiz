@@ -1,4 +1,4 @@
-const quizz = {
+const quiz = {
     first: {
         label: 'shabu shabu ?',
         answers: [
@@ -13,4 +13,4 @@ const quizz = {
         label: 'chizu'
     }
 };
-export default quizz;
+export default quiz;
