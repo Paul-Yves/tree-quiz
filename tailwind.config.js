@@ -1,12 +1,5 @@
 module.exports = {
-  purge: {
-    content: ["./app/**/*.html.haml", "./app/**/*.js", "./app/**/*.jsx"],
-    options: {
-      safelist: {
-        greedy: ["/safe$/"],
-      },
-    },
-  },
+  purge: ["./app/**/*.html.haml", "./app/**/*.js", "./app/**/*.jsx"],
   content: [],
   theme: {
     extend: {},
