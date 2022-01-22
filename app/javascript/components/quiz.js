@@ -7,10 +7,17 @@ const quiz = {
         ]
     },
     second: {
-        label: 'Ola ola'
+        label: 'Ola ola',
+        answers: [
+            {button: 'Ulthar', target: 'third'},
+            {button: 'Mirza', target: 'fourth'},
+        ]
     },
     third: {
         label: 'chizu'
+    },
+    fourth: {
+        label: 'Soup'
     }
 };
 export default quiz;
