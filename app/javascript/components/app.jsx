@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import quizz from './quizz';
 import Question from './question';
 import EndQuestion from './endQuestion';
+import {sendAnswers} from './answersService';
 
 const App = () => {
     const [name, setName] = useState('');
@@ -17,9 +18,10 @@ const App = () => {
         const nextQuestion = quizz[answer.target];
         if (nextQuestion.answers === undefined) {
             updatedAnswers.push(nextQuestion.label);
+            sendAnswers(name, updatedAnswers);
+            console.log('sending', name, updatedAnswers)
         }
         setAnswers(updatedAnswers);
-        console.log('answers', updatedAnswers);
         setQuestion(nextQuestion);
     }
     const handleNameChange = (event) => {
