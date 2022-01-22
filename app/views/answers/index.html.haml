@@ -1,0 +1,12 @@
+%h1
+  All answers by user
+- Answer.all.find_each do |answer_data|
+  .answer
+    .user
+      = answer_data.username
+    .final-answer
+      = answer_data.answers[-1]
+    .answers
+      %ul
+        - answer_data.answers[0..-2].each do |answer|
+          %li= answer
