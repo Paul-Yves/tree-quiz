@@ -32,7 +32,7 @@ const App = () => {
     }
 
     return (
-        <div>
+        <div className="max-w-lg mx-auto mt-16 text-center max-w-sm rounded overflow-hidden shadow-lg p-10">
             <h1>Bienvenu sur Ebichu quiz</h1>
 
             <input name={'name'} type={'text'} value={name} onChange={handleNameChange} />
