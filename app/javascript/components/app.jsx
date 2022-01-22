@@ -32,11 +32,13 @@ const App = () => {
     }
 
     return (
-        <div className="max-w-lg mx-auto mt-16 text-center max-w-sm rounded overflow-hidden shadow-lg p-10">
-            <h1>Bienvenu sur Ebichu quiz</h1>
+        <div className="max-w-3xl mx-auto mt-16 text-center max-w-sm rounded shadow-lg p-10 bg-gray-300">
+            <h1 className={"mb-16"}>Bienvenu sur Ebichu quiz</h1>
 
-            <input name={'name'} type={'text'} value={name} onChange={handleNameChange} />
-            <button onClick={startquiz}>Suivant</button>
+            <label>Nom : </label>
+            <input name={'name'} type={'text'} value={name} onChange={handleNameChange}
+                   className={'px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring'}/>
+            <button onClick={startquiz} className={'rounded bg-green-600 ml-16 p-4 hover:bg-green-800'}>Suivant</button>
         </div>
     )
 }
