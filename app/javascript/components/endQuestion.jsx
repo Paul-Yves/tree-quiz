@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EndQuestion = ({question}) => {
-    return <div className="max-w-lg mx-auto mt-16 text-center max-w-sm rounded shadow-lg p-10 bg-gray-300">
+    return <div className="max-w-lg mx-auto mt-16 text-center rounded shadow-lg p-10 bg-gray-300">
         <h1>{question.label}</h1>
     </div>
 }
