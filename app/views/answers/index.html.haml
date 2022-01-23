@@ -17,4 +17,4 @@
       .answers
         %ul
           - answer_data.user_answers[0..-2].each do |answer|
-            %li= answer
+            %li= "#{answer[0]} : #{answer[1]}"
