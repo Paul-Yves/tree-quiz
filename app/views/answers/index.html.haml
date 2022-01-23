@@ -11,6 +11,9 @@
     .answer-summary
       .user-data
         = "#{answer_data.username} : #{answer_data.user_answers[-1]}"
+        = form_for answer_data, method: :delete do |form|
+          = hidden_field_tag :password, params[:password]
+          = form.submit 'Supprimer', data: { confirm: 'Sûr de toi ?' }
       .answers
         %ul
           - answer_data.user_answers[0..-2].each do |answer|
