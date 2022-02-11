@@ -1,0 +1,3 @@
+class Valentine < ApplicationRecord
+
+end

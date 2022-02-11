@@ -1,0 +1,7 @@
+.box
+  %h1
+    Laisser un valentine
+  .valentine-form
+    = form_for Valentine.new, method: :post do |form|
+      = form.text_area :content
+      = form.submit 'Envoyer'

@@ -1,0 +1,10 @@
+.box
+  %h1
+    Tous les valentines
+
+  - Valentine.all.find_each do |valentine|
+    .valentine
+      = valentine.content
+      = form_for valentine, method: :delete do |form|
+        = hidden_field_tag :password, params[:password]
+        = form.submit 'Supprimer', data: { confirm: 'Sûr de toi ?' }
