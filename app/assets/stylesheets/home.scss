@@ -30,3 +30,16 @@
     align-items: center;
   }
 }
+
+.valentines {
+  .valentine:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.valentine-form {
+  textarea {
+    width: 80%;
+    height: 200px;
+  }
+}
